@@ -15,11 +15,11 @@ app.post('/refresh', (req, res) =>{
     const refreshToken = req.body.refreshToken;
     const spotifyApi = new SpotifyWebApi({
         
-        redirectUri: process.env.REDIRECT_URI,
-        clientId: process.env.CLIENT_ID,
+        redirectUri:process.env.REDIRECT_URI,
+        clientId:process.env.CLIENT_ID,
         clientSecret:process.env.CLIENT_SECRET,
-               
-                refreshToken,
+          
+        refreshToken,
 
     })
     spotifyApi.refreshAccessToken()
